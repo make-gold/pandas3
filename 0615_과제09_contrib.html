@@ -11804,117 +11804,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#fec_2016=pd.read_csv(&#39;P00000001-ALL.csv&#39;, low_memory=False, iterator=True, index_col=False)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#fec_2016=pd.read_csv(&#39;P00000001-ALL.csv&#39;, low_memory=False, nrows=5000, index_col=False)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fec_2016</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;P00000001-ALL.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">iterator</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
                      <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">list_col</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df=DataFrame(fec_2016.get_chunk(5000))</span>
-<span class="n">df</span><span class="o">=</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">fec_2016</span><span class="o">.</span><span class="n">get_chunk</span><span class="p">(</span><span class="mi">5000</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmp</span><span class="o">=</span><span class="n">fec_2016</span><span class="o">.</span><span class="n">get_chunk</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmp</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_AL</span><span class="p">[</span><span class="s1">&#39;contb_receipt_dt&#39;</span><span class="p">])</span>
-<span class="n">df_AL</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmp</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmp</span><span class="p">[[</span><span class="s1">&#39;cand_nm&#39;</span><span class="p">,</span><span class="s1">&#39;contbr_st&#39;</span><span class="p">,</span> <span class="s1">&#39;contbr_employer&#39;</span><span class="p">,</span> <span class="s1">&#39;contbr_occupation&#39;</span><span class="p">,</span> <span class="s1">&#39;contb_receipt_amt&#39;</span><span class="p">]]</span>
 </pre></div>
 
 </div>
@@ -11937,7 +11831,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">go</span><span class="o">=</span><span class="kc">True</span>
@@ -11957,29 +11851,21 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
 
-</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;StopIteration&#39;&gt;
+</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sys.getsizeof(pd.read_csv(&#39;&#39;))</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -14634,6 +14520,315 @@ Name: Clinton, Hillary Rodham, dtype: float64</pre>
 <h3 id="&#50900;&#48324;-&#54980;&#50896;-&#52509;&#50529;">&#50900;&#48324; &#54980;&#50896; &#52509;&#50529;<a class="anchor-link" href="#&#50900;&#48324;-&#54980;&#50896;-&#52509;&#50529;">&#182;</a></h3>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_contrib</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="s1">&#39;contb_receipt_amt&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span><span class="p">)],</span> 
+                       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cand_nm&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>cand_nm</th>
+      <th>Clinton, Hillary Rodham</th>
+      <th>Trump, Donald J.</th>
+    </tr>
+    <tr>
+      <th>contb_receipt_dt</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2006-08-01</th>
+      <td>NaN</td>
+      <td>4.000000e+02</td>
+    </tr>
+    <tr>
+      <th>2015-04-01</th>
+      <td>1.294612e+07</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2015-05-01</th>
+      <td>1.170736e+07</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2015-06-01</th>
+      <td>1.362130e+07</td>
+      <td>5.307500e+04</td>
+    </tr>
+    <tr>
+      <th>2015-07-01</th>
+      <td>7.164590e+06</td>
+      <td>2.282840e+05</td>
+    </tr>
+    <tr>
+      <th>2015-08-01</th>
+      <td>6.158244e+06</td>
+      <td>5.922639e+05</td>
+    </tr>
+    <tr>
+      <th>2015-09-01</th>
+      <td>1.023940e+07</td>
+      <td>1.361080e+05</td>
+    </tr>
+    <tr>
+      <th>2015-10-01</th>
+      <td>8.962942e+06</td>
+      <td>1.775993e+05</td>
+    </tr>
+    <tr>
+      <th>2015-11-01</th>
+      <td>9.680774e+06</td>
+      <td>1.118327e+05</td>
+    </tr>
+    <tr>
+      <th>2015-12-01</th>
+      <td>1.321132e+07</td>
+      <td>2.624290e+05</td>
+    </tr>
+    <tr>
+      <th>2016-01-01</th>
+      <td>1.259773e+07</td>
+      <td>2.126335e+05</td>
+    </tr>
+    <tr>
+      <th>2016-02-01</th>
+      <td>2.355966e+07</td>
+      <td>4.335565e+05</td>
+    </tr>
+    <tr>
+      <th>2016-03-01</th>
+      <td>2.379705e+07</td>
+      <td>6.278961e+05</td>
+    </tr>
+    <tr>
+      <th>2016-04-01</th>
+      <td>2.141358e+07</td>
+      <td>4.084962e+05</td>
+    </tr>
+    <tr>
+      <th>2016-05-01</th>
+      <td>2.335611e+07</td>
+      <td>1.675993e+06</td>
+    </tr>
+    <tr>
+      <th>2016-06-01</th>
+      <td>3.464713e+07</td>
+      <td>1.634799e+07</td>
+    </tr>
+    <tr>
+      <th>2016-07-01</th>
+      <td>5.060634e+07</td>
+      <td>2.462736e+07</td>
+    </tr>
+    <tr>
+      <th>2016-08-01</th>
+      <td>5.383994e+07</td>
+      <td>2.317338e+07</td>
+    </tr>
+    <tr>
+      <th>2016-09-01</th>
+      <td>7.225210e+07</td>
+      <td>2.508752e+07</td>
+    </tr>
+    <tr>
+      <th>2016-10-01</th>
+      <td>7.640151e+07</td>
+      <td>2.406026e+07</td>
+    </tr>
+    <tr>
+      <th>2016-11-01</th>
+      <td>2.939946e+07</td>
+      <td>6.377758e+06</td>
+    </tr>
+    <tr>
+      <th>2016-12-01</th>
+      <td>-9.973092e+04</td>
+      <td>-2.675916e+05</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mon_contrib</span><span class="o">=</span><span class="n">df_contrib</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="s1">&#39;contb_receipt_amt&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">df_contrib</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">],</span> 
+                       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cand_nm&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mon_contrib</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">x</span>)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>cand_nm</th>
+      <th>Clinton, Hillary Rodham</th>
+      <th>Trump, Donald J.</th>
+    </tr>
+    <tr>
+      <th>contb_receipt_dt</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>12597733.26</td>
+      <td>212633.53</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>23559659.29</td>
+      <td>433556.49</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>23797046.25</td>
+      <td>627896.10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>34359696.13</td>
+      <td>408496.21</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>35063470.95</td>
+      <td>1675993.29</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>48268431.20</td>
+      <td>16401063.70</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>57770931.66</td>
+      <td>24855648.72</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>59998178.96</td>
+      <td>23766039.47</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>82491507.91</td>
+      <td>25223630.84</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>85364455.07</td>
+      <td>24237855.57</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>39080234.84</td>
+      <td>6489590.58</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13111590.79</td>
+      <td>-5162.55</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
